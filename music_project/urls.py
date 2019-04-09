@@ -20,7 +20,7 @@ from django.conf.urls import url
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('music_app.urls')),
-    url(r'^$', views.FrontendAppView.as_view()) #New URL for the index route
+    url(r'^$', views.FrontendAppView.as_view()),
+    path('api/p5/', include('music_app.urls'))
 ]
 
